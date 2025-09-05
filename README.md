@@ -83,4 +83,4 @@ Make the design mobile responsive.
 
 Rakesh
 
-📧 Email: thisisrakesh21
+📧 Email: thisisrakesh21@gmail.com
