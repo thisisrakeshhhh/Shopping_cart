@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.nav{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fa-poo-storm{
+    font-size: 80px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.nav2 li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+}
+.nav2 li a{
+    text-decoration: none;
+    color: black;
+}
+.nav2 li a:hover{
+    color: rgb(255, 0, 0);
+    transition: 0.3s;
+}
+
+main{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+.videoBg{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 25px;
+    padding: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,1);
+}
+
+.videoBg video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover; 
+}
+
+.videoBg .videocontent1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 20px;
+}
+
+.videoBg .videocontent2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 40px;
+}
+
+.productcart {
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,1);
+    transition: 0.3s;
+    display: inline-block;
+    background: #fff; 
+    margin: 30px;
+    cursor: pointer;
+}
+
+.productcart:hover {
+    transform: scale(1.05);
+}
+
+
+
+.productimg {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.productname {
+    font-size: 20px;
+    margin: 10px 0;
+} 
+
+.productprice {
+    font-size: 18px;
+    color: #444;
+    margin: 5px 0;
+}
+
+.productcart button{
+    background: #28a745;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.addtocart:hover {
+    background: #218838;
+
+}
+.cart{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,1);
+
+}
+.cart h1{
+    margin-bottom: 20px;
+
+}
+#Total{
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
