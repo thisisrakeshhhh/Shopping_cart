@@ -45,28 +45,38 @@
             <img src="https://iplanet.one/cdn/shop/files/iPhone_16_Pro_Desert_Titanium_PDP_Image_Position_1__en-IN_38a0c11d-1864-457e-a2e2-7333c0480a7b.jpg?v=1727249764" alt="Mobile" class="productimg">
             <h3 class="productname">Mobile</h3>
             <p class="productprice">₹12,000</p>
-            <button onclick="addtocart(this.a=12000)">Add to Cart</button>
+            <button onclick="addtocart1('Mobile', 12000)">Add to Cart</button>
         </div>
     
         <div class="productcart" data-name="Laptop" data-price="45000">
             <img src="https://m.media-amazon.com/images/I/71IQiviMzWL._UF1000,1000_QL80_.jpg" alt="Laptop" class="productimg">
             <h3 class="productname">Laptop</h3>
             <p class="productprice">₹45,000</p>
-            <button onclick="addtocart(this.a=45000)">Add to Cart</button>
+            <button onclick="addtocart2('Laptop', 450000)">Add to Cart</button>
         </div>
         <div class="productcart" data-name="Headphones" data-price="900">
             <img src="https://www.designinfo.in/wp-content/uploads/2024/10/Apple-AirPods-Max-Wireless-Over-Ear-Closed-Back-Headphones-Purple-USB-C-1-485x485-optimized.webp" alt="Headphones" class="productimg" width="25%">
             <h3 class="productname">Headphones</h3>
-            <p class="productprice">₹900</p>
-            <button onclick="addtocart(this.a=900)">Add to Cart</button>
+            <p class="productprice">₹2000</p>
+            <button onclick="addtocart3('Headphone', 2000)">Add to Cart</button>
         </div>
     </div>
 </section>
 <section class="cart">
     <h1>My list</h1>
     <p id="Total">Total: ₹0</p>
+
     <div id="item"></div>
-    <p id="showproduct"></p>
+
+    <p id="showproduct1"></p>
+    <p id="itemadded1">This is all items : </p>
+
+    <p id="showproduct2"></p>
+    <p id="itemadded2">This is all items : </p>
+
+    <p id="showproduct3"></p>
+    <p id="itemadded3">This is all items : </p>
+
     <p></p>
 </section>
     </main>
