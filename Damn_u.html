@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,77 +10,91 @@
     <!-- this is from font awersome -->
 
 </head>
+
 <body>
     <header class="nav">
-            <a href="#Damn_u.html">
-                <i class="fa-solid fa-poo-storm"></i>
-            </a>
+        <a href="#Damn_u.html">
+            <i class="fa-solid fa-poo-storm"></i>
+        </a>
 
-            <ul class="nav2">
-                <li><a href="#Home.html">Home</a></li>
-                <li><a href="#Products.html">Products</a></li>
-                <li><a href="#About.html">About</a></li>
-                <li><a href="#Contact.html">Contact</a></li>
-                <li><a href="#Cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
+        <ul class="nav2">
+            <li><a href="#Home.html">Home</a></li>
+            <li><a href="#Products.html">Products</a></li>
+            <li><a href="#About.html">About</a></li>
+            <li><a href="#Contact.html">Contact</a></li>
+            <li><a href="#Cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
     </header>
-    <main>
-        <section class="videoBg">
-            <video autoplay muted loop>
-                <source src="./asset/4185235-hd_1920_1080_25fps.mp4" type="video/mp4">
-                Your Browser is Old.
-            </video>
-            <div class="videocontent1">
-                <h1>Sample</h1>
-            </div>
+  <main>
 
-            <div class="videocontent2">
-                <h1>Shopping Cart</h1>
-            </div>
-        </section>
-<section class="product">
-    <h2>Products</h2>
-    <div class="productlist">
+    <section class="videoBg">
+      <video autoplay muted loop>
+        <source src="./asset/4185235-hd_1920_1080_25fps.mp4" type="video/mp4">
+        Your Browser is Old.
+      </video>
+      <div class="videocontent1">
+        <h1>Sample</h1>
+      </div>
+      <div class="videocontent2">
+        <h1>Shopping Cart</h1>
+      </div>
+    </section>
 
-        <div class="productcart" data-name="Mobile" data-price="1200">
-            <img src="https://iplanet.one/cdn/shop/files/iPhone_16_Pro_Desert_Titanium_PDP_Image_Position_1__en-IN_38a0c11d-1864-457e-a2e2-7333c0480a7b.jpg?v=1727249764" alt="Mobile" class="productimg">
-            <h3 class="productname">Mobile</h3>
-            <p class="productprice">₹12,000</p>
-            <button onclick="addtocart1('Mobile', 12000)">Add to Cart</button>
+    <section class="product">
+      <h2>Products</h2>
+      <div class="productlist">
+
+        <div class="productcart">
+          <img src="https://iplanet.one/cdn/shop/files/iPhone_16_Pro_Desert_Titanium_PDP_Image_Position_1__en-IN_38a0c11d-1864-457e-a2e2-7333c0480a7b.jpg?v=1727249764"
+            alt="Mobile" class="productimg">
+          <h3 class="productname">Mobile</h3>
+          <p class="productprice">₹12,000</p>
+          <button onclick="addtocart1('Mobile', 12000)">+</button>
+          <button onclick="remove1('Mobile', 12000)">-</button>
         </div>
+
+        <div class="productcart">
+          <img src="https://m.media-amazon.com/images/I/71IQiviMzWL._UF1000,1000_QL80_.jpg" alt="Laptop"
+            class="productimg">
+          <h3 class="productname">Laptop</h3>
+          <p class="productprice">₹45,000</p>
+          <button onclick="addtocart2('Laptop', 45000)">+</button>
+          <button onclick="remove2('Laptop', 45000)">-</button>
+        </div>
+
+        <div class="productcart">
+          <img src="https://www.designinfo.in/wp-content/uploads/2024/10/Apple-AirPods-Max-Wireless-Over-Ear-Closed-Back-Headphones-Purple-USB-C-1-485x485-optimized.webp"
+            alt="Headphones" class="productimg">
+          <h3 class="productname">Headphones</h3>
+          <p class="productprice">₹2000</p>
+          <button onclick="addtocart3('Headphones', 2000)">+</button>
+          <button onclick="remove3('Headphones', 2000)">-</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cart">
+      <h1>🛒 My Cart</h1>
+      <p id="Total">Total: ₹0</p>
+
+      <p id="showproduct1">No of Mobile: 0</p>
+      <p id="itemadded1"></p>
+
+      <p id="showproduct2">No of Laptop: 0</p>
+      <p id="itemadded2"></p>
+
+      <p id="showproduct3">No of Headphones: 0</p>
+      <p id="itemadded3"></p>
+    </section>
+
     
-        <div class="productcart" data-name="Laptop" data-price="45000">
-            <img src="https://m.media-amazon.com/images/I/71IQiviMzWL._UF1000,1000_QL80_.jpg" alt="Laptop" class="productimg">
-            <h3 class="productname">Laptop</h3>
-            <p class="productprice">₹45,000</p>
-            <button onclick="addtocart2('Laptop', 450000)">Add to Cart</button>
-        </div>
-        <div class="productcart" data-name="Headphones" data-price="900">
-            <img src="https://www.designinfo.in/wp-content/uploads/2024/10/Apple-AirPods-Max-Wireless-Over-Ear-Closed-Back-Headphones-Purple-USB-C-1-485x485-optimized.webp" alt="Headphones" class="productimg" width="25%">
-            <h3 class="productname">Headphones</h3>
-            <p class="productprice">₹2000</p>
-            <button onclick="addtocart3('Headphone', 2000)">Add to Cart</button>
-        </div>
-    </div>
-</section>
-<section class="cart">
-    <h1>My list</h1>
-    <p id="Total">Total: ₹0</p>
 
-    <div id="item"></div>
 
-    <p id="showproduct1"></p>
-    <p id="itemadded1">This is all items : </p>
 
-    <p id="showproduct2"></p>
-    <p id="itemadded2">This is all items : </p>
 
-    <p id="showproduct3"></p>
-    <p id="itemadded3">This is all items : </p>
-
-    <p></p>
-</section>
-    </main>
+  </main>
     <script src="myscript.js"></script>
 </body>
+
 </html>
