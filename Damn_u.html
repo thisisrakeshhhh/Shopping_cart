@@ -2,13 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="mystyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="mystyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- this is from font awersome -->
-
 </head>
 
 <body>
@@ -22,73 +21,65 @@
             <li><a href="#Products.html">Products</a></li>
             <li><a href="#About.html">About</a></li>
             <li><a href="#Contact.html">Contact</a></li>
-            <li><a href="#Cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li>
+                <a href="#Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
         </ul>
     </header>
-  <main>
+    <main>
+        <section class="videoBg">
+            <video autoplay muted loop>
+                <source src="./asset/4185235-hd_1920_1080_25fps.mp4" type="video/mp4" />
+                Your Browser is Old.
+            </video>
+            <div class="videocontent1">
+                <h1>Sample</h1>
+            </div>
+            <div class="videocontent2">
+                <h1>Shopping Cart</h1>
+            </div>
+        </section>
 
-    <section class="videoBg">
-      <video autoplay muted loop>
-        <source src="./asset/4185235-hd_1920_1080_25fps.mp4" type="video/mp4">
-        Your Browser is Old.
-      </video>
-      <div class="videocontent1">
-        <h1>Sample</h1>
-      </div>
-      <div class="videocontent2">
-        <h1>Shopping Cart</h1>
-      </div>
-    </section>
+        <section class="product">
+            <h2>Products</h2>
+            <div class="productlist">
+                <div class="productcart">
+                    <img src="https://iplanet.one/cdn/shop/files/iPhone_16_Pro_Desert_Titanium_PDP_Image_Position_1__en-IN_38a0c11d-1864-457e-a2e2-7333c0480a7b.jpg?v=1727249764"
+                        alt="Mobile" class="productimg" />
+                    <h3 class="productname">Mobile</h3>
+                    <p class="productprice">₹12,000</p>
+                    <button onclick="addToCart(1, 'Mobile', 1200)">Add Mobile</button>
+                </div>
 
-    <section class="product">
-      <h2>Products</h2>
-      <div class="productlist">
+                <div class="productcart">
+                    <img src="https://m.media-amazon.com/images/I/71IQiviMzWL._UF1000,1000_QL80_.jpg" alt="Laptop"
+                        class="productimg" />
+                    <h3 class="productname">Laptop</h3>
+                    <p class="productprice">₹45,000</p>
+                    <button onclick="addToCart(2, 'Laptop', 40000)">Add Laptop</button>
+                </div>
 
-        <div class="productcart">
-          <img src="https://iplanet.one/cdn/shop/files/iPhone_16_Pro_Desert_Titanium_PDP_Image_Position_1__en-IN_38a0c11d-1864-457e-a2e2-7333c0480a7b.jpg?v=1727249764"
-            alt="Mobile" class="productimg">
-          <h3 class="productname">Mobile</h3>
-          <p class="productprice">₹12,000</p>
-          <button onclick="addtocart1('Mobile', 12000)">+</button>
-          <button onclick="remove1('Mobile', 12000)">-</button>
-        </div>
+                <div class="productcart">
+                    <img src="https://www.designinfo.in/wp-content/uploads/2024/10/Apple-AirPods-Max-Wireless-Over-Ear-Closed-Back-Headphones-Purple-USB-C-1-485x485-optimized.webp"
+                        alt="Headphones" class="productimg" />
+                    <h3 class="productname">Headphones</h3>
+                    <p class="productprice">₹2000</p>
+                    <button onclick="addToCart(3, 'Headphone', 2000)">
+                        Add Headphone
+                    </button>
+                </div>
+            </div>
+        </section>
 
-        <div class="productcart">
-          <img src="https://m.media-amazon.com/images/I/71IQiviMzWL._UF1000,1000_QL80_.jpg" alt="Laptop"
-            class="productimg">
-          <h3 class="productname">Laptop</h3>
-          <p class="productprice">₹45,000</p>
-          <button onclick="addtocart2('Laptop', 45000)">+</button>
-          <button onclick="remove2('Laptop', 45000)">-</button>
-        </div>
+        <section class="cart">
+            <h1>My Cart</h1>
+            <div id="cart1"></div>
+            <div id="cart2"></div>
+            <div id="cart3"></div>
 
-        <div class="productcart">
-          <img src="https://www.designinfo.in/wp-content/uploads/2024/10/Apple-AirPods-Max-Wireless-Over-Ear-Closed-Back-Headphones-Purple-USB-C-1-485x485-optimized.webp"
-            alt="Headphones" class="productimg">
-          <h3 class="productname">Headphones</h3>
-          <p class="productprice">₹2000</p>
-          <button onclick="addtocart3('Headphones', 2000)">+</button>
-          <button onclick="remove3('Headphones', 2000)">-</button>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="cart">
-      <h1>My Cart</h1>
-      <p id="Total">Total: ₹0</p>
-
-      <p id="showproduct1">No of Mobile: 0</p>
-      <p id="itemadded1"></p>
-
-      <p id="showproduct2">No of Laptop: 0</p>
-      <p id="itemadded2"></p>
-
-      <p id="showproduct3">No of Headphones: 0</p>
-      <p id="itemadded3"></p>
-    </section>
-    
-  </main>
+            <h3 id="Total">Total: ₹0</h3>
+        </section>
+    </main>
     <script src="myscript.js"></script>
 </body>
 

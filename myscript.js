@@ -1,59 +1,78 @@
-    var product1 = 0;
-    var product2 = 0;
-    var product3 = 0;
-    var total = 0;
+var product1 = 0;
+var product2 = 0;
+var product3 = 0;
+var total = 0;
 
-    function updateTotal() {
-      document.getElementById("Total").innerHTML = "Total: ₹" + total;
-    }
+function updateTotal() {
+    document.getElementById("Total").innerHTML = "Total: ₹" + total;
+}
 
-    function addtocart1(name, price) {
-      product1++;
-      total += price;
-      document.getElementById("showproduct1").innerHTML = "No of " + name + ": " + product1;
-      document.getElementById("itemadded1").innerHTML = name + " | Price: ₹" + price;
-      updateTotal();
+function addToCart(id, name, price) {
+    if (id === 1 && product1 === 0) {
+        product1 = 1;
+        total += price;
+        document.getElementById("cart1").innerHTML = `
+          ${name} | Price: ₹${price}
+          <button class="btn" onclick="increase(1, ${price}) class = 'btn' ">+</button>
+          <button class="btn" onclick="decrease(1, ${price}) class = 'btn' ">-</button>
+          <span id="qty1">Qty: ${product1}</span>
+        `;
+    } else if (id === 2 && product2 === 0) {
+        product2 = 1;
+        total += price;
+        document.getElementById("cart2").innerHTML = `
+          ${name} | Price: ₹${price} 
+          <button class="btn" onclick="increase(2, ${price})">+</button>
+          <button class="btn" onclick="decrease(2, ${price})">-</button>
+          <span id="qty2">Qty: ${product2}</span>
+        `;
+    } else if (id === 3 && product3 === 0) {
+        product3 = 1;
+        total += price;
+        document.getElementById("cart3").innerHTML = `
+          ${name} | Price: ₹${price} 
+          <button class="btn" onclick="increase(3, ${price})">+</button>
+          <button class="btn" onclick="decrease(3, ${price})">-</button>
+          <span id="qty3">Qty: ${product3}</span>
+        `;
     }
-    function remove1(name, price) {
-      if (product1 > 0) {
+    updateTotal();
+}
+
+function increase(id, price) {
+    if (id === 1) {
+        product1++;
+        total += price;
+        document.getElementById("qty1").innerHTML = "Qty: " + product1;
+    } else if (id === 2) {
+        product2++;
+        total += price;
+        document.getElementById("qty2").innerHTML = "Qty: " + product2;
+    } else if (id === 3) {
+        product3++;
+        total += price;
+        document.getElementById("qty3").innerHTML = "Qty: " + product3;
+    }
+    updateTotal();
+}
+
+
+function decrease(id, price) {
+    if (id === 1 && product1 > 0) {
         product1--;
         total -= price;
-        document.getElementById("showproduct1").innerHTML = "No of " + name + ": " + product1;
-        if (product1 === 0) document.getElementById("itemadded1").innerHTML = "";
-        updateTotal();
-      }
-    }
-
-    function addtocart2(name, price) {
-      product2++;
-      total += price;
-      document.getElementById("showproduct2").innerHTML = "No of " + name + ": " + product2;
-      document.getElementById("itemadded2").innerHTML = name + " | Price: ₹" + price;
-      updateTotal();
-    }
-    function remove2(name, price) {
-      if (product2 > 0) {
+        document.getElementById("qty1").innerHTML = "Qty: " + product1;
+        if (product1 === 0) document.getElementById("cart1").innerHTML = "";
+    } else if (id === 2 && product2 > 0) {
         product2--;
         total -= price;
-        document.getElementById("showproduct2").innerHTML = "No of " + name + ": " + product2;
-        if (product2 === 0) document.getElementById("itemadded2").innerHTML = "";
-        updateTotal();
-      }
-    }
-
-    function addtocart3(name, price) {
-      product3++;
-      total += price;
-      document.getElementById("showproduct3").innerHTML = "No of " + name + ": " + product3;
-      document.getElementById("itemadded3").innerHTML = name + " | Price: ₹" + price;
-      updateTotal();
-    }
-    function remove3(name, price) {
-      if (product3 > 0) {
+        document.getElementById("qty2").innerHTML = "Qty: " + product2;
+        if (product2 === 0) document.getElementById("cart2").innerHTML = "";
+    } else if (id === 3 && product3 > 0) {
         product3--;
         total -= price;
-        document.getElementById("showproduct3").innerHTML = "No of " + name + ": " + product3;
-        if (product3 === 0) document.getElementById("itemadded3").innerHTML = "";
-        updateTotal();
-      }
+        document.getElementById("qty3").innerHTML = "Qty: " + product3;
+        if (product3 === 0) document.getElementById("cart3").innerHTML = "";
     }
+    updateTotal();
+}
